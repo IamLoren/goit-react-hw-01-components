@@ -1,18 +1,18 @@
-export const Statistics = () => {
-    return (
-        <ul className="stats">
-    <li>
-      <span className="label">Followers</span>
-      <span className="quantity">1000</span>
-    </li>
-    <li>
-      <span className="label">Views</span>
-      <span className="quantity">2000</span>
-    </li>
-    <li>
-      <span className="label">Likes</span>
-      <span className="quantity">3000</span>
-    </li>
-  </ul>
-    )
-}
+export const Statistics = ({ title, stats }) => {
+  return (
+    <section className="statistics">
+      {title && <h2 className="title">{title}</h2>}
+
+      <ul className="stat-list">
+        {stats.map(stat => {
+          return (
+            <li className="item" key={stat.id}>
+              <span className="label">{stat.label}</span>
+              <span className="percentage">{stat.percentage}</span>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+};
