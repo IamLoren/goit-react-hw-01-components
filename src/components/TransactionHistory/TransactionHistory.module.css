@@ -1,0 +1,27 @@
+.transactionHistory {
+    width: 100%;
+}
+
+.titleLine {
+    background-color: rgb(21, 153, 176);
+    color: white;
+    text-transform: uppercase;
+}
+
+.titleLine>th {
+   height: 80px;
+}
+
+.dataRow {
+    text-align: center;
+    background-color: white;
+}
+
+.dataRow:nth-child(2n + 2) {
+     background-color: rgb(201, 200, 200);
+}
+
+.dataRow>td {
+    height: 80px;
+}
+
