@@ -1,19 +1,19 @@
-
+import s from './Profile.module.css';
 
 export const Stats = ({followers, views, likes}) => {
     return (
-        <ul className="stats">
+        <ul className={s.stats}>
     <li>
-      <span className="label">Followers</span>
-      <span className="quantity">{followers}</span>
+      <span className={s.label}>Followers</span>
+      <span className={s.quantity}>{followers}</span>
     </li>
     <li>
-      <span className="label">Views</span>
-      <span className="quantity">{views}</span>
+      <span className={s.label}>Views</span>
+      <span className={s.quantity}>{views}</span>
     </li>
     <li>
-      <span className="label">Likes</span>
-      <span className="quantity">{likes}</span>
+      <span className={s.label}>Likes</span>
+      <span className={s.quantity}>{likes}</span>
     </li>
   </ul>
     )

@@ -1,24 +1,20 @@
+import s from './Profile.module.css';
 
-import { Stats } from "./Stats";
-
-export const Profile = ({username, tag, location, avatar, stats}) => {
+export const Profile = ({username, tag, location, avatar, children}) => {
   return (
     <>
-       <div className="profile">
-        <div className="description">
+       <div className={s.profile}>
+        <div className={s.description}>
           <img
             src={avatar}
             alt="User avatar"
-            className="avatar"
+            className={s.avatar}
           />
-          <p className="name">{username}</p>
-          <p className="tag">{tag}</p>
-          <p className="location">{location}</p>
+          <p className={s.name}>{username}</p>
+          <p className={s.tag}>@{tag}</p>
+          <p className={s.location}>{location}</p>
         </div>
-        <Stats 
-        followers={stats.followers}
-        views={stats.views}
-        likes={stats.likes} />
+        {children}
       </div>
     </>
   );

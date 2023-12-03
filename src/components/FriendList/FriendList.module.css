@@ -1,0 +1,26 @@
+.friendList {
+    width: 600px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 50PX;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    transition: all 0.3s;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    box-shadow: 1px 1px 4px 2px gray;
+}
+
+.status {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
